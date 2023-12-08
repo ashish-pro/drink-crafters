@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  transition:
+    color 350ms ease-in-out,
+    background-color 350ms ease-in-out;
+}
+
+/* Mobile Navbar  */
+@media (max-width: 1023px) {
+  .mobile-nav {
+    @apply fixed top-0 -right-52 opacity-0 bg-base-100 z-10 h-full w-[75%] max-w-xs rounded-s-3xl transition-all duration-300 ease-in-out pointer-events-none shadow-2xl;
+  }
+  .show {
+    @apply opacity-100 right-0 pointer-events-auto;
+  }
+  .mobile-nav > ul {
+    @apply flex-col;
+  }
+  header[data-overlay="false"]::after,
+  header[data-overlay="true"]::after {
+    @apply content-[""] fixed inset-0 invisible pointer-events-none transition-all duration-[250ms] ease-in-out opacity-0 bg-gradient-to-b z-[5] from-[#00000018] to-[#000000b3];
+  }
+  header[data-overlay="true"]::after {
+    @apply visible opacity-100;
+  }
+}
+
+/* Main SearchBar Focus Styling  */
+.inputBox:has(input:focus-visible) {
+  outline: 2px solid;
+  outline-offset: 4px;
+  outline-color: hsl(var(--bc) / 0.3);
+  border: 2px solid hsl(var(--bc) / 0.5);
+}
+
+/* Background Pattern ClipPath  */
+.path {
+  clip-path: polygon(
+    21% 67%,
+    13% 24%,
+    35% 29%,
+    96% 48%,
+    96% 27%,
+    0% 45%,
+    58% 61%,
+    74% 15%
+  );
+}
+
+/* Scrollbar Styling  */
+
+::-webkit-scrollbar {
+  @apply w-[9px] rounded-full;
+}
+::-webkit-scrollbar-track {
+  @apply bg-base-100 my-2;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-focus rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+@supports (scrollbar-color: olive black) {
+  * {
+    scrollbar-color: hsl(var(--pf)) hsl(var(--b1));
+    scrollbar-width: thin;
+  }
+}
+
+/* Utility Class  */
+.text-balance {
+  text-wrap: balance;
+}
