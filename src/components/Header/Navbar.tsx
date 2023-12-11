@@ -13,8 +13,8 @@ export default function Navbar({}: Props) {
 
   const closeMenu = (): void => {
     setIsOpen(false);
-    if (document.title !== "Siplore") {
-      document.title = "Siplore";
+    if (document.title !== "DrinkCrafters") {
+      document.title = "DrinkCrafters";
     }
   };
 
@@ -23,7 +23,7 @@ export default function Navbar({}: Props) {
     <header data-overlay={isOpen} className="navbar bg-base-100 px-4 xl:px-32">
       <div className="w-full flex justify-between lg:flex-1 lg:w-auto">
         <CustomLink
-          onClick={() => (document.title = "Siplore")}
+          onClick={() => (document.title = "DrinkCrafters")}
           pathTo="/"
           className="normal-case btn-ghost text-xl"
         >

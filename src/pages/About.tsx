@@ -14,8 +14,8 @@ export default function About({}: Props) {
             Elevate your sip
           </h3>
           <p className="text-base-content text-base leading-6 max-w-[65ch]">
-            Welcome to Siplore, your ultimate destination for exploring the
-            captivating world of cocktails. At Siplore, we're passionate about
+            Welcome to DrinkCrafters, your ultimate destination for exploring the
+            captivating world of cocktails. At DrinkCrafters, we're passionate about
             mixology and the stories behind every sip.
           </p>
         </div>

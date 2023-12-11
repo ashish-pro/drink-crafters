@@ -95,7 +95,7 @@ export default function CocktailPage({}: Props) {
       };
 
       setCocktail([FilteredCocktail]);
-      document.title = `Siplore - ${FilteredCocktail.Name}`;
+      document.title = `DrinkCrafters - ${FilteredCocktail.Name}`;
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
@@ -119,7 +119,7 @@ export default function CocktailPage({}: Props) {
     <main className="max-w-[1440px] mx-auto px-4 py-10 sm:px-6 lg:px-12 space-y-8 xl:px-20">
       <div className="slide-top">
         <CustomLink
-          onClick={() => (document.title = "Siplore")}
+          onClick={() => (document.title = "DrinkCrafters")}
           RippleColor="hsl(var(--n) / 0.2)"
           pathTo="/"
         >

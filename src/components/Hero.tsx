@@ -17,7 +17,7 @@ export default function Hero() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-base-content text-opacity-60">
               Indulge in a captivating journey of flavors and tales with
-              Siplore. Discover the origins, ingredients, and stories behind
+              DrinkCrafters. Discover the origins, ingredients, and stories behind
               your favorite cocktails.
             </p>
             <div className="mt-10 grid place-content-center gap-12">
